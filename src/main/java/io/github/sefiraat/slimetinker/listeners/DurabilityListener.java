@@ -68,18 +68,20 @@ public class DurabilityListener implements Listener {
         if (friend.isCancelEvent()) {
             event.setCancelled(true);
         }
+        // fix issue 97: only when the event is not cancelled should we check durability and set damage
+        if(!event.isCancelled()){
+            ItemMeta im = event.getItem().getItemMeta();
+            Damageable damageable = (Damageable) im;
+            event.setDamage((int) Math.ceil(event.getDamage() * friend.getDurabilityMod())); // Modify the damage taken
 
-        ItemMeta im = event.getItem().getItemMeta();
-        Damageable damageable = (Damageable) im;
-        event.setDamage((int) Math.ceil(event.getDamage() * friend.getDurabilityMod())); // Modify the damage taken
-
-        if ((damageable.getDamage() + event.getDamage()) >= event.getItem().getType().getMaxDurability()) { // This will break the tool, lets stop that!
-            damageable.setDamage(event.getItem().getType().getMaxDurability() - 1);
-            damagedItem.setItemMeta(im);
-            event.setCancelled(true);
-        } else if (event instanceof FakeItemDamageEvent) {
-            damageable.setDamage(damageable.getDamage() + event.getDamage());
-            damagedItem.setItemMeta(im);
+            if ((damageable.getDamage() + event.getDamage()) >= event.getItem().getType().getMaxDurability()) { // This will break the tool, lets stop that!
+                damageable.setDamage(event.getItem().getType().getMaxDurability() - 1);
+                damagedItem.setItemMeta(im);
+                event.setCancelled(true);
+            } else if (event instanceof FakeItemDamageEvent) {
+                damageable.setDamage(damageable.getDamage() + event.getDamage());
+                damagedItem.setItemMeta(im);
+            }
         }
     }
 
