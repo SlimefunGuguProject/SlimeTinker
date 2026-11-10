@@ -6,7 +6,7 @@ SlimeTinker 的非官方中文 Wiki 包含了所有特性的列表: [点击前�
 
 ## 下载
 
-[![Build Status](https://builds.guizhanss.com/api/badge/SlimefunGuguProject/SlimeTinker/master/latest)](https://builds.guizhanss.com/SlimefunGuguProject/SlimeTinker/master)
+[下载 SlimeTinker](https://resources.guizhanss.com/plugin/SlimeTinker)
 
 ## 功能包括:
 
