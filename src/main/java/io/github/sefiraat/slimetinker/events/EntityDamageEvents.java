@@ -120,7 +120,7 @@ public final class EntityDamageEvents {
 
     public static void headSteel(EventFriend friend) {
         Entity e = friend.getDamagedEntity();
-        Particle.DustOptions dustOptions = new Particle.DustOptions(Color.RED, 5);
+        Particle.DustOptions dustOptions = new Particle.DustOptions(Color.RED, 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 50, 1.5, 1.5, 1.5, 1, dustOptions);
     }
 
@@ -222,11 +222,11 @@ public final class EntityDamageEvents {
 
     public static void headMagSteel(EventFriend friend) {
         Entity e = friend.getDamagedEntity();
-        Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(200, 50, 50), 5);
+        Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(200, 50, 50), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 30, 3, 3, 3, 1, dustOptions);
-        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(220, 20, 75), 5);
+        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(220, 20, 75), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 30, 3, 3, 3, 1, dustOptions2);
-        Particle.DustOptions dustOptions3 = new Particle.DustOptions(Color.fromRGB(250, 75, 10), 5);
+        Particle.DustOptions dustOptions3 = new Particle.DustOptions(Color.fromRGB(250, 75, 10), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 30, 3, 3, 3, 1, dustOptions3);
     }
 
@@ -290,7 +290,7 @@ public final class EntityDamageEvents {
     public static void headStarDust(EventFriend friend) {
         friend.setDamageMod(friend.getDamageMod() + 0.5);
         Entity e = friend.getDamagedEntity();
-        Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(240, 230, 100), 5);
+        Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(240, 230, 100), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 60, 3, 3, 3, 1, dustOptions);
     }
 
@@ -304,11 +304,11 @@ public final class EntityDamageEvents {
 
     public static void headStainlessSteel(EventFriend friend) {
         Entity e = friend.getDamagedEntity();
-        Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(200, 50, 50), 5);
+        Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(200, 50, 50), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 60, 3, 3, 3, 1, dustOptions);
-        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(220, 20, 75), 5);
+        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(220, 20, 75), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 60, 3, 3, 3, 1, dustOptions2);
-        Particle.DustOptions dustOptions3 = new Particle.DustOptions(Color.fromRGB(250, 75, 10), 5);
+        Particle.DustOptions dustOptions3 = new Particle.DustOptions(Color.fromRGB(250, 75, 10), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 60, 3, 3, 3, 1, dustOptions3);
     }
 
@@ -343,11 +343,11 @@ public final class EntityDamageEvents {
     public static void rodRefinedIron(EventFriend friend) {
         friend.setDamageMod(friend.getDamageMod() + 0.5);
         Entity e = friend.getDamagedEntity();
-        Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(200, 50, 50), 5);
+        Particle.DustOptions dustOptions = new Particle.DustOptions(Color.fromRGB(200, 50, 50), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 30, 3, 3, 3, 1, dustOptions);
-        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(50, 200, 50), 5);
+        Particle.DustOptions dustOptions2 = new Particle.DustOptions(Color.fromRGB(50, 200, 50), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 30, 3, 3, 3, 1, dustOptions2);
-        Particle.DustOptions dustOptions3 = new Particle.DustOptions(Color.fromRGB(50, 50, 200), 5);
+        Particle.DustOptions dustOptions3 = new Particle.DustOptions(Color.fromRGB(50, 50, 200), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 30, 3, 3, 3, 1, dustOptions3);
     }
 
@@ -441,9 +441,9 @@ public final class EntityDamageEvents {
 
     public static void plateMagic(EventFriend friend) {
         Entity e = friend.getDamagedEntity();
-        Particle.DustOptions d1 = new Particle.DustOptions(Color.fromRGB(GeneralUtils.roll(255), GeneralUtils.roll(255), GeneralUtils.roll(255)), 5);
-        Particle.DustOptions d2 = new Particle.DustOptions(Color.fromRGB(GeneralUtils.roll(255), GeneralUtils.roll(255), GeneralUtils.roll(255)), 5);
-        Particle.DustOptions d3 = new Particle.DustOptions(Color.fromRGB(GeneralUtils.roll(255), GeneralUtils.roll(255), GeneralUtils.roll(255)), 5);
+        Particle.DustOptions d1 = new Particle.DustOptions(Color.fromRGB(GeneralUtils.roll(255), GeneralUtils.roll(255), GeneralUtils.roll(255)), 4);
+        Particle.DustOptions d2 = new Particle.DustOptions(Color.fromRGB(GeneralUtils.roll(255), GeneralUtils.roll(255), GeneralUtils.roll(255)), 4);
+        Particle.DustOptions d3 = new Particle.DustOptions(Color.fromRGB(GeneralUtils.roll(255), GeneralUtils.roll(255), GeneralUtils.roll(255)), 4);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 30, 3, 3, 3, 1, d1);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 30, 3, 3, 3, 1, d2);
         e.getWorld().spawnParticle(Particle.REDSTONE, e.getLocation(), 30, 3, 3, 3, 1, d3);
